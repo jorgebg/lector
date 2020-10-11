@@ -1,1 +1,838 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>rawdog</title>
+</head>
+<body id="rawdog">
+<div id="header">
+<h1>rawdog</h1>
+</div>
+<div id="items">
+<div class="day">
+<h2>Sunday, 11 October 2020</h2>
+<div class="time">
+<h3>10:40 AM</h3>
+<div class="item feed-e5c28223 feed-cuadernodeculturacientfica" id="item-c7b60fe2">
+<p class="itemheader">
+<span class="itemtitle"><a href="http://feedproxy.google.com/~r/CuadernoDeCulturaCientfica/~3/jOzzpiU6rPo/">El problema de las flechas de Mahavira</a></span>
+<span class="itemfrom">[<a href="https://culturacientifica.com">Cuaderno de Cultura Cient&#237;fica</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      &#160;
+    </p>
+    <p>
+      Uno de mis libros preferidos de problemas y rompecabezas matem&#225;ticos es el libro <i>Famous Puzzles of Great Mathematicians</i> (Rompecabezas famosos de grandes matem&#225;ticos) del matem&#225;tico Miodrag Petrovic. Uno de los problemas que aparecen en el apartado de aritm&#233;tica es el siguiente problema del matem&#225;tico indio del siglo IX Mahavira (o Mahaviracharya, es decir, &#8220;Mahavira el maestro&#8221;), que aparece en su libro <i>Ganatasarasamgraha &#8211; Compendio de la esencia de las matem&#225;ticas&#8211;</i>, del a&#241;o 850:
+    </p>
+    <blockquote>
+      <p>
+        <b>Problema</b>: <i>Las flechas, con forma de cilindros de secci&#243;n circular, pueden ser empaquetadas formando un haz hexagonal. Si hay 18 flechas en la parte exterior del haz, determinar el n&#250;mero total de flechas que hay (en el haz) dentro del carcaj</i>.
+      </p>
+    </blockquote>
+    <p>
+      Este problema lo podemos resolver de una forma sencilla dibujando flechas (sus secciones circulares) formando una estructura hexagonal, como en la imagen siguiente. Podr&#237;amos proceder de forma ordenada. Primero 1 flecha en el centro, luego 6 alrededor formando un hex&#225;gono, despu&#233;s 12 en el siguiente hex&#225;gono alrededor del anterior, y finalmente 18 flechas en el hex&#225;gono exterior. Por lo tanto, la respuesta al problema es 1 + 6 + 12 + 18 = 37 flechas en total.
+    </p>
+    <figure class="wp-caption aligncenter" id="attachment_29783">
+      <img alt="" class="wp-image-29783" height="400" src="https://culturacientifica.com/app/uploads/2020/10/imagen-1-560x623.jpg" style="height: auto;" width="359">
+      <figcaption class="wp-caption-text" id="caption-attachment-29783" style="font-size: 85%;">
+        Distribuci&#243;n hexagonal de las flechas con 18 flechas en la parte exterior
+      </figcaption>
+    </figure>
+    <p>
+      &#160;
+    </p>
+    <p>
+      La soluci&#243;n de este problema est&#225; relacionada con los llamados <i>n&#250;meros poligonales centrados</i>. Como es bien conocido, los <i>n&#250;meros poligonales</i> (triangulares, cuadrados, pentagonales, hexagonales, etc&#233;tera) son aquellos n&#250;meros que se obtienen al representar el n&#250;mero como una disposici&#243;n poligonal de puntos o piedras, como puede verse en la entrada <a href="https://culturacientifica.com/2013/12/18/el-asesinato-de-pitagoras-historia-y-matematicas-y-ii/">El asesinato de Pit&#225;goras, historia y matem&#225;ticas (y II)</a>. Sin embargo, existen otras disposiciones geom&#233;tricas de puntos o piedras con forma poligonal, pero con un punto en el centro y los pol&#237;gonos alrededor del mismo, son los n&#250;meros poligonales centrados (triangulares centrados, cuadrados centrados, pentagonales centrados, hexagonales centrados, etc&#233;tera).
+    </p>
+    <p>
+      Como puede verse en la siguiente imagen, los primeros <i>n&#250;meros triangulares centrados</i> son 1, 4, 10, 19, los <i>cuadrados centrados</i> son 1, 5, 13, 25, los <i>pentagonales centrados</i> 1, 6, 16, 31 y los <i>hexagonales centrados</i>, llamados por Martin Gardner <i>n&#250;meros hex</i>, 1, 7, 19, 37.
+    </p>
+    <figure class="wp-caption aligncenter" id="attachment_29785">
+      <img alt="" class="size-medium wp-image-29785" height="525" src="https://culturacientifica.com/app/uploads/2020/10/imagen-2-560x525.jpg" style="height: auto;" width="560">
+      <figcaption class="wp-caption-text" id="caption-attachment-29785" style="font-size: 85%;">
+        Los primeros n&#250;meros triangulares centrados, cuadrados centrados, pentagonales centrados y hexagonales centrados
+      </figcaption>
+    </figure>
+    <p>
+      &#160;
+    </p>
+    <p>
+      Si nos fijamos en la construcci&#243;n de los n&#250;meros poligonales centrados, se ve r&#225;pidamente que se empieza por un punto, despu&#233;s se representa el pol&#237;gono alrededor del punto y se van a&#241;adiendo pol&#237;gonos cada vez m&#225;s grandes. Por lo tanto, es f&#225;cil calcular el n&#250;mero de puntos que se necesitan para representar los pol&#237;gonos centrados. En concreto, para un pol&#237;gono de <i>k</i> lados, la f&#243;rmula para calcular los n&#250;meros poligonales centrados es:
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29786" height="80" src="https://culturacientifica.com/app/uploads/2020/10/imagen-3-560x157.jpg" style="height: auto;" width="285">
+    </p>
+    <p>
+      Pueden construirse f&#225;cilmente demostraciones sin palabras (v&#233;anse <a href="https://culturacientifica.com/2016/11/02/matematicas-ver-tocar/">Matem&#225;ticas para ver y tocar</a> y <a href="https://culturacientifica.com/2016/11/16/mas-matematicas-ver-tocar/">M&#225;s matem&#225;ticas para ver y tocar</a>) de algunas primeras identidades de los n&#250;meros poligonales centrados.
+    </p>
+    <p>
+      Por ejemplo, se pueden relacionar los n&#250;meros cuadrados, pentagonales y hexagonales centrados con los n&#250;meros triangulares (los cl&#225;sicos, no los centrados, sobre los que puede leerse en la entrada <a href="https://culturacientifica.com/2013/12/18/el-asesinato-de-pitagoras-historia-y-matematicas-y-ii/">El asesinato de Pit&#225;goras, historia y matem&#225;ticas (y II)</a>): <i>CC</i><sub><i>n</i></sub> = 1 + 4<i>T</i><sub><i>n</i></sub> <sub>&#8211; 1</sub>, <i>PC</i><sub><i>n</i></sub> = 1 + 4<i>T</i><sub><i>n</i></sub> <sub>&#8211; 1</sub>, hex<sub><i>n</i></sub> = 1 + 6<i>T</i><sub><i>n</i></sub> <sub>&#8211; 1</sub>, con la notaci&#243;n evidente.
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29787" height="340" src="https://culturacientifica.com/app/uploads/2020/10/imagen-4-555x640.jpg" style="height: auto;" width="295">
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29788" height="340" src="https://culturacientifica.com/app/uploads/2020/10/imagen-5-555x640.jpg" style="height: auto;" width="295">
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29789" height="340" src="https://culturacientifica.com/app/uploads/2020/10/imagen-6-560x563.jpg" style="height: auto;" width="338">
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      De hecho, esa es una identidad que se cumple para todos los n&#250;meros poligonales centrados, en concreto:
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29790" height="20" src="https://culturacientifica.com/app/uploads/2020/10/imagen-7-560x66.jpg" style="height: auto;" width="169">
+    </p>
+    <p>
+      Pueden verse m&#225;s identidades relacionadas con los n&#250;meros poligonales centrados. Para empezar, los n&#250;meros triangulares centrados (que forman la sucesi&#243;n denominada A005448 en la <a href="https://oeis.org/A005448">Enciclopedia online de sucesiones de enteros</a>, cuyos primeros veinte t&#233;rminos son 1, 4, 10, 19, 31, 46, 64, 85, 109, 136, 166, 199, 235, 274, 316, 361, 409, 460, 514, 571, etc&#233;tera), pueden ser expresados como suma de tres n&#250;meros triangulares normales: <i>TC</i><sub><i>n</i></sub> = <i>T</i><sub><i>n</i></sub> + <i>T</i><sub><i>n</i></sub> <sub>&#8211; 1</sub> + <i>T</i><sub><i>n</i></sub> <sub>&#8211; 2</sub>, para <i>n</i> mayor o igual que 3.
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29791" height="340" src="https://culturacientifica.com/app/uploads/2020/10/imagen-8-560x563.jpg" style="height: auto;" width="338">
+    </p>
+    <p>
+      O los n&#250;meros cuadrados centrados (que forman la sucesi&#243;n denominada A001844 en la <a href="https://oeis.org/A001844">Enciclopedia online de sucesiones de enteros</a>, cuyos primeros veinte t&#233;rminos son 1, 5, 13, 25, 41, 61, 85, 113, 145, 181, 221, 265, 313, 365, 421, 481, 545, 613, 685, 761, etc&#233;tera) pueden expresarse como suma de dos n&#250;meros cuadrados normales: <i>CC</i><sub><i>n</i></sub> = <i>C</i><sub><i>n</i></sub> + <i>C</i><sub><i>n</i></sub> <sub>&#8211; 1</sub>.
+    </p>
+    <p>
+      <img alt="" class="aligncenter wp-image-29792" height="340" src="https://culturacientifica.com/app/uploads/2020/10/imagen-9-555x640.jpg" style="height: auto;" width="295">
+    </p>
+    <p>
+      Los veinte primeros n&#250;meros pentagonales centrados, que es la sucesi&#243;n A005891 en la <a href="https://oeis.org/A005891">Enciclopedia online de sucesiones de enteros</a> son 1, 6, 16, 31, 51, 76, 106, 141, 181, 226, 276, 331, 391, 456, 526, 601, 681, 766, 856, 951, etc&#233;tera. O la sucesi&#243;n <a href="https://oeis.org/A003215">A003215</a> es la de los n&#250;meros hex, cuyos veinte primeros t&#233;rminos son 1, 7, 19, 37, 61, 91, 127, 169, 217, 271, 331, 397, 469, 547, 631, 721, 817, 919, 1027, 1141, etc&#233;tera.
+    </p>
+    <p>
+      Pueden obtenerse tambi&#233;n f&#243;rmulas para n&#250;meros poligonales centrados con una mayor cantidad de lados, por ejemplo, para los n&#250;meros octogonales centrados, se puede demostrar que son n&#250;meros cuadrados: <i>OC</i><sub><i>n</i></sub> = <i>C</i><sub>2</sub><sub><i>n</i></sub> <sub>&#8211; 1</sub>.
+    </p>
+    <p>
+      <img alt="" class="aligncenter size-medium wp-image-29793" height="284" src="https://culturacientifica.com/app/uploads/2020/10/imagen-10-560x284.jpg" style="height: auto;" width="560">
+    </p>
+    <p>
+      Vamos a terminar esta entrada del Cuaderno de Cultura Cient&#237;fica con otro rompecabezas que aparece en el apartado de aritm&#233;tica del libro <i>Famous Puzzles of Great Mathematicians</i>. Esta <i>configuraci&#243;n m&#225;gica</i> est&#225; contenida originalmente en el libro del matem&#225;tico chino Yang Hui (aprox. 1238-1298) <i>Xugu Zhaiqi Suanfa</i> (Continuaci&#243;n de la tradici&#243;n de extra&#241;os m&#233;todos de computaci&#243;n), de 1275.
+    </p>
+    <blockquote>
+      <p>
+        <b>Problema</b>: <i>Colocar los n&#250;meros del 1 al 33 en los peque&#241;os c&#237;rculos de la siguiente imagen, de forma que todos los n&#250;meros de las circunferencias conc&#233;ntricas, incluido el centro, as&#237; como todos los n&#250;meros de los di&#225;metros, sumen lo mismo</i>.
+      </p>
+    </blockquote>
+    <p>
+      <span lang="en-US"><img alt="" class="aligncenter size-full wp-image-29794" height="515" src="https://culturacientifica.com/app/uploads/2020/10/imagen-11.jpg" style="height: auto;" width="526"></span>
+    </p>
+    <p>
+      Este problema os lo dejo para quienes quer&#225;is enfrentaros al reto. &#161;Que os divirt&#225;is!
+    </p>
+    <p>
+      <span lang="en-US"><b>Bibliograf&#237;a</b></span>
+    </p>
+    <p>
+      <span lang="en-US">1.- Miodrag S. Petrovic,</span> <span lang="en-US"><i>Famous Puzzles of Great Mathematicians</i></span><span lang="en-US">, AMS, 2009.</span>
+    </p>
+    <p>
+      <span lang="en-US">2.- David Well,</span> <span lang="en-US"><i>The Penguin Book of Curious and Interesting Puzzles</i></span><span lang="en-US">, Penguin Books, 1992.</span>
+    </p>
+    <p>
+      <span lang="en-US">3.-</span> <span style="color: #000000;"><span lang="en-US">John Conway, Richard K. Guy,</span></span> <span style="color: #000000;"><span lang="en-US"><i>The book of numbers</i></span></span><span style="color: #000000;"><span lang="en-US">, Springer-Verlag, 1996.</span></span>
+    </p>
+    <p>
+      <span style="color: #000000;"><span lang="en-US">4.- Elena Deza, Michel Marie Deza,</span></span> <span style="color: #000000;"><span lang="en-US"><i>Figurative Numbers</i></span></span><span style="color: #000000;"><span lang="en-US">, World Scientific, 2012.</span></span>
+    </p>
+    <p>
+      <span style="color: #000000;">5.- Ra&#250;l Ib&#225;&#241;ez,</span> <span style="color: #000000;"><i>La gran familia de los n&#250;meros</i></span> <span style="color: #000000;">(t&#237;tulo provisional), Catarata, 2020.</span>
+    </p>
+    <p>
+      <span class="Apple-style-span">Sobre el autor: <em>Ra&#250;l Ib&#225;&#241;ez es profesor del Departamento de Matem&#225;ticas de la UPV/EHU y colaborador de la C&#225;tedra de Cultura Cient&#237;fica</em></span>
+    </p>
+    <p>
+      El art&#237;culo <a href="https://culturacientifica.com/2020/10/07/el-problema-de-las-flechas-de-mahavira/" rel="nofollow">El problema de las flechas de Mahavira</a> se ha escrito en <a href="https://culturacientifica.com" rel="nofollow">Cuaderno de Cultura Cient&#237;fica</a>.
+    </p>
+    <div class="yarpp-related-rss">
+      <h3>
+        Entradas relacionadas:
+      </h3>
+      <ol>
+        <li>
+          <a href="https://culturacientifica.com/2017/11/01/problema-la-plantacion-arboles-filas-2/" rel="bookmark" title="El problema de la plantaci&#243;n de &#225;rboles en filas (2)">El problema de la plantaci&#243;n de &#225;rboles en filas (2)</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2019/01/23/un-dulce-problema-de-paul-erdos/" rel="bookmark" title="Un dulce problema de Paul Erd&#246;s">Un dulce problema de Paul Erd&#246;s</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2017/09/20/problema-matematico-las-cartas-extraviadas/" rel="bookmark" title="El problema matem&#225;tico de las cartas extraviadas">El problema matem&#225;tico de las cartas extraviadas</a>
+        </li>
+      </ol>
+    </div><img alt="" height="1" src="http://feeds.feedburner.com/~r/CuadernoDeCulturaCientfica/~4/jOzzpiU6rPo" width="1">
+</div>
+</div>
 
+<div class="item feed-e5c28223 feed-cuadernodeculturacientfica" id="item-3137c7d2">
+<p class="itemheader">
+<span class="itemtitle"><a href="http://feedproxy.google.com/~r/CuadernoDeCulturaCientfica/~3/KITWktveL1s/">Los nuevos &#8216;elementos&#8217; de las series radiactivas</a></span>
+<span class="itemfrom">[<a href="https://culturacientifica.com">Cuaderno de Cultura Cient&#237;fica</a>]</span>
+</p>
+<div class="itemdescription">
+<figure class="wp-caption aligncenter" id="attachment_29779">
+      <img alt="" class="size-full wp-image-29779" height="1281" src="https://culturacientifica.com/app/uploads/2020/10/the-periodic-table-4273681_1920.jpg" style="height: auto;" width="1920">
+      <figcaption class="wp-caption-text" id="caption-attachment-29779" style="font-size: 85%;">
+        Foto: <a href="https://pixabay.com/es/users/vubp-6000785/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4273681">vubp</a> / <a href="https://pixabay.com/es/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4273681">Pixabay</a>
+      </figcaption>
+    </figure>
+    <p>
+      El descubrimiento de que exist&#237;an varias <a href="https://culturacientifica.com/2020/09/08/las-series-de-desintegracion-radiactiva/">series radiactivas</a>, cada una de las cuales contiene sustancias aparentemente nuevas, cre&#243; un problema grave. En 1910, todav&#237;a hab&#237;a algunos espacios vac&#237;os en la tabla peri&#243;dica de los elementos, pero no hab&#237;a suficientes espacios para las muchas sustancias nuevas que aparentemente parece&#237;an surgir en las desintegraciones. La tabla peri&#243;dica es una forma de presentar los elementos seg&#250;n sus propiedades qu&#237;micas y, si no pod&#237;a incluir los &#8220;elementos radiactivos&#8221;, tendr&#237;a que ser revisada, quiz&#225;s de alguna manera dr&#225;stica y fundamental. Era un problema no menor.
+    </p>
+    <p>
+      La clave para la soluci&#243;n del rompecabezas radica en la observaci&#243;n de que algunos de las sustancias que se acababan de descubrir como miembros de una serie radiactiva tienen <b>propiedades qu&#237;micas id&#233;nticas</b> a las de los elementos conocidos, aunque algunas de sus propiedades f&#237;sicas s&#237; son diferentes.
+    </p>
+    <figure class="wp-caption aligncenter" id="attachment_29776">
+      <img alt="" class="wp-image-29776 size-full" height="732" src="https://culturacientifica.com/app/uploads/2020/10/serie-desintegraci%C3%B3n.png" style="height: auto;" width="598">
+      <figcaption class="wp-caption-text" id="caption-attachment-29776" style="font-size: 85%;">
+        Fuente: Wikimedia Commons
+      </figcaption>
+    </figure>
+    <p>
+      Por ejemplo, se descubri&#243; que lo que entonces se llamaba Uranio II, &#8220;bisnieto&#8221; del Uranio I, ten&#237;a las mismas propiedades qu&#237;micas que el propio Uranio I. Cuando se mezclaban, no se pod&#237;an separar por medios qu&#237;micos. Ning&#250;n qu&#237;mico ha detectado, mediante an&#225;lisis qu&#237;mico, ninguna diferencia entre estas dos sustancias [1]. Pero las dos sustancias, ahora conocidas como uranio-238 y uranio-234, difieren entre s&#237; en ciertas propiedades f&#237;sicas. Como vemos en la tabla, el uranio-238 y el U-234 tienen periodos de semidesintegraci&#243;n bastante diferentes: 4,468&#183;10<sup>9</sup> a&#241;os y 2,455&#183;10<sup>5</sup> a&#241;os, respectivamente. Si nos fijamos en los modos de desintegraci&#243;n, la masa de un &#225;tomo de uranio-234 debe ser menor que la de un &#225;tomo de uranio-238 en la masa de una part&#237;cula alfa y dos part&#237;culas beta.
+    </p>
+    <p>
+      Otro par de sustancias radiactivas que se descubrieron en la &#233;poca, llamadas entonces radio B y radio G, ten&#237;an las mismas propiedades qu&#237;micas que el plomo; cuando se mezclan con plomo, no se pueden separar de &#233;l por medios qu&#237;micos. Estas sustancias ahora se conocen como plomo-214 y plomo-206, respectivamente. El plomo 214 es radiactivo y el plomo 206 es estable. La tabla indica que los &#225;tomos deben diferir entre s&#237; en masa el equivalente a dos part&#237;culas alfa y cinco part&#237;culas beta. Hay muchos otros ejemplos de este tipo de diferencias f&#237;sicas entre dos o m&#225;s sustancias radiactivas con el mismo comportamiento qu&#237;mico.
+    </p>
+    <p>
+      Soddy sugiri&#243; una soluci&#243;n que cambi&#243; nuestra visi&#243;n sobre la naturaleza de la materia y la relaci&#243;n de los elementos en la tabla peri&#243;dica. Propuso que un elemento qu&#237;mico podr&#237;a considerarse como una sustancia pura s&#243;lo en el sentido de que todos sus &#225;tomos tienen las mismas propiedades qu&#237;micas; es decir, <b>un elemento qu&#237;mico puede ser en realidad una mezcla de &#225;tomos con diferente comportamiento radiactivo y diferentes masas at&#243;micas</b>, pero todos con las mismas propiedades qu&#237;micas. Hab&#237;a surgido el concepto de is&#243;topo.
+    </p>
+    <p>
+      Notas:
+    </p>
+    <p>
+      [1] Otra cosa ocurre en los elementos muy ligeros, donde diferencias peque&#241;as en t&#233;rminos absolutos son muy importantes en t&#233;rminos relativos. Pero eso fue muy posterior.
+    </p>
+    <p>
+      <em>Sobre el autor: <a href="http://about.me/cesar_tome">C&#233;sar Tom&#233; L&#243;pez</a> es divulgador cient&#237;fico y editor de <a href="http://mappingignorance.org/">Mapping Ignorance</a></em>
+    </p>
+    <p>
+      El art&#237;culo <a href="https://culturacientifica.com/2020/10/06/los-nuevos-elementos-de-las-series-radiactivas/" rel="nofollow">Los nuevos &#8216;elementos&#8217; de las series radiactivas</a> se ha escrito en <a href="https://culturacientifica.com" rel="nofollow">Cuaderno de Cultura Cient&#237;fica</a>.
+    </p>
+    <div class="yarpp-related-rss">
+      <h3>
+        Entradas relacionadas:
+      </h3>
+      <ol>
+        <li>
+          <a href="https://culturacientifica.com/2020/09/08/las-series-de-desintegracion-radiactiva/" rel="bookmark" title="Las series de desintegraci&#243;n radiactiva">Las series de desintegraci&#243;n radiactiva</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2020/09/15/la-impureza-por-definicion-de-las-muestras-radiactivas/" rel="bookmark" title="La impureza, por definici&#243;n, de las muestras radiactivas">La impureza, por definici&#243;n, de las muestras radiactivas</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2019/11/12/el-modelo-de-bohr-sommerfeld-y-las-propiedades-quimicas-de-los-elementos/" rel="bookmark" title="El modelo de Bohr-Sommerfeld y las propiedades qu&#237;micas de los elementos">El modelo de Bohr-Sommerfeld y las propiedades qu&#237;micas de los elementos</a>
+        </li>
+      </ol>
+    </div><img alt="" height="1" src="http://feeds.feedburner.com/~r/CuadernoDeCulturaCientfica/~4/KITWktveL1s" width="1">
+</div>
+</div>
+
+<div class="item feed-e5c28223 feed-cuadernodeculturacientfica" id="item-12f8f3f4">
+<p class="itemheader">
+<span class="itemtitle"><a href="http://feedproxy.google.com/~r/CuadernoDeCulturaCientfica/~3/97Azdl9aZ9g/">Las pinzas m&#225;s poderosas del reino animal</a></span>
+<span class="itemfrom">[<a href="https://culturacientifica.com">Cuaderno de Cultura Cient&#237;fica</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter size-full wp-image-29757" height="1285" src="https://culturacientifica.com/app/uploads/2020/10/birgus_latro.jpg" style="height: auto;" width="1821">
+    </p>
+    <p>
+      <em>Birgus latro</em> es el artr&#243;podo terrestre m&#225;s pesado del mundo. Puede llegar a alcanzar los 4 kg de masa y 40 cm de longitud, aunque sus extremidades extendidas abarcan una distancia de 1m. No es el cangrejo m&#225;s grande ni, seguramente, tampoco podr&#237;a ser mayor de lo que es, pues lo m&#225;s probable es que no pudiera sostener sobre sus extremidades una masa mayor y desplazarse en tierra firme. El m&#225;s grande es el cangrejo gigante japon&#233;s, <em>Macrocheira kaempfrei</em>, pero ese es marino y bajo el agua no operan las restricciones estructurales propias del medio terrestre. <em>Birgus</em>, o cangrejo de los cocoteros, como es conocido, vive en zonas costeras de islas tropicales de los oc&#233;anos &#205;ndico y Pac&#237;fico, y se alimenta de cocos, higos, y diversos materiales org&#225;nicos. Su nombre com&#250;n hace alusi&#243;n, precisamente, a que consume cocos, lo que no es haza&#241;a peque&#241;a. Los rompe con sus pinzas y come lo que hay en su interior.
+    </p>
+    <p>
+      <em>Birgus latro</em> no s&#243;lo pesa mucho, sino que tiene, adem&#225;s mucha fuerza. En realidad, m&#225;s que mucha, tiene much&#237;sima fuerza; es el crust&#225;ceo que m&#225;s tiene, de hecho. Hemos sabido de su poder&#237;o gracias a un estudio liderado por Shin-Ichiro Oka, de la Okinawa Churasima Foundation, en el que han medido la fuerza que desarrollan 29 cangrejos de los cocoteros de la isla de Okinawa.
+    </p>
+    <p>
+      Los investigadores observaron que la fuerza que ejerc&#237;an con sus pinzas era proporcional al tama&#241;o o masa corporal. El valor registrado m&#225;s alto fue de 1800 newtons (un cangrejo de 2 Kg), por lo que uno de 4 kg llegar&#237;a a ejercer una de 3000 newtons. Unas pinzas tan poderosas le permiten consumir una gran variedad de productos, como ya se ha apuntado. Y tambi&#233;n son una poderosa arma defensiva, lo que le ayuda a evitar los ataques de buen n&#250;mero de depredadores potenciales y a rechazar la presencia en su entorno de posibles competidores.
+    </p>
+    <p>
+      Es dif&#237;cil hacerse una idea de lo que significan 2000 o 3000 newtons. Pong&#225;moslo, pues, en un contexto m&#225;s amplio. Una langosta ejercer&#237;a una fuerza de no m&#225;s de 250 newtons con sus pinzas, muy inferior a la de <em>Birgus</em>. Nuestras manos desarrollan alrededor de 300. Y, en el otro extremo, la mand&#237;bula de un cocodrilo, de unos 16000, la m&#225;s intensa que es capaz de desarrollar un animal.
+    </p>
+    <p>
+      <strong>Fuente</strong>: Shin-ichiro Oka, Taketeru Tomita, Kei Miyamoto (2016): A Mighty Claw: Pinching Force of the Coconut Crab, the Largest Terrestrial Crustacean. <a href="http://dx.doi.org/10.1371/journal.pone.0166108">PlosOne</a>.
+    </p>
+    <p>
+      <strong>Nota</strong>: Esta anotaci&#243;n est&#225; basada en <em>Un poderoso crust&#225;ceo</em>, de Juan Ignacio P&#233;rez Iglesias, publicada <a href="https://zoologik.naukas.com/2017/01/12/un-poderoso-crustaceo/">en ZooLogik</a>.
+    </p>
+    <p>
+      El art&#237;culo <a href="https://culturacientifica.com/2020/10/05/las-pinzas-mas-poderosas-del-reino-animal/" rel="nofollow">Las pinzas m&#225;s poderosas del reino animal</a> se ha escrito en <a href="https://culturacientifica.com" rel="nofollow">Cuaderno de Cultura Cient&#237;fica</a>.
+    </p>
+    <div class="yarpp-related-rss">
+      <h3>
+        Entradas relacionadas:
+      </h3>
+      <ol>
+        <li>
+          <a href="https://culturacientifica.com/2017/03/07/evolucion-del-tamano-animal/" rel="bookmark" title="Evoluci&#243;n del tama&#241;o animal">Evoluci&#243;n del tama&#241;o animal</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2017/05/23/el-balance-energetico/" rel="bookmark" title="El balance energ&#233;tico animal">El balance energ&#233;tico animal</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2017/03/21/historia-minima-la-complejidad-animal/" rel="bookmark" title="Historia m&#237;nima de la complejidad animal">Historia m&#237;nima de la complejidad animal</a>
+        </li>
+      </ol>
+    </div><img alt="" height="1" src="http://feeds.feedburner.com/~r/CuadernoDeCulturaCientfica/~4/97Azdl9aZ9g" width="1">
+</div>
+</div>
+
+<div class="item feed-e5c28223 feed-cuadernodeculturacientfica" id="item-f26ad1b8">
+<p class="itemheader">
+<span class="itemtitle"><a href="http://feedproxy.google.com/~r/CuadernoDeCulturaCientfica/~3/SW1zCbo7DJg/">Ciencia y Misterio, la webserie</a></span>
+<span class="itemfrom">[<a href="https://culturacientifica.com">Cuaderno de Cultura Cient&#237;fica</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter size-full wp-image-29719" height="329" src="https://culturacientifica.com/app/uploads/2020/10/cym-640x329.jpg" style="height: auto;" width="640">
+    </p>
+    <p>
+      La semana pasada tuvo lugar la presentaci&#243;n mundial de <strong>Ciencia y Misterio</strong>, un proyecto de la Universidad P&#250;blica de Navarra. Se trata de una webserie con su misterio y su humor que pretende mostrar algunos de los problemas actuales de la actividad cient&#237;fica, como el fraude, la presi&#243;n por publicar o el exceso de horas de trabajo.
+    </p>
+    <p>
+      La webserie est&#225; compuesta por los 5 cap&#237;tulos que aparecen abajo. En el &#250;ltimo est&#225;n los cr&#233;ditos de todas las personas que han participado. El acto de presentaci&#243;n en el que guionistas, actores, y el director (con alg&#250;n invitado ilustre adem&#225;s) comentaron el proyecto puede <a href="https://www.youtube.com/watch?v=NL2-PzJfx1c&amp;feature=youtu.be">verse aqu&#237;</a>.
+    </p>
+    <p>
+      Episodio 1
+    </p>
+    <p>
+      Episodio 2
+    </p>
+    <p>
+      Episodio 3
+    </p>
+    <p>
+      Episodio 4
+    </p>
+    <p>
+      Episodio 5
+    </p>
+    <p>
+      Edici&#243;n realizada por <a href="https://about.me/cesar_tome">C&#233;sar Tom&#233; L&#243;pez</a>
+    </p>
+    <p>
+      El art&#237;culo <a href="https://culturacientifica.com/2020/10/03/ciencia-y-misterio-la-webserie/" rel="nofollow">Ciencia y Misterio, la webserie</a> se ha escrito en <a href="https://culturacientifica.com" rel="nofollow">Cuaderno de Cultura Cient&#237;fica</a>.
+    </p>
+    <div class="yarpp-related-rss">
+      <h3>
+        Entradas relacionadas:
+      </h3>
+      <ol>
+        <li>
+          <a href="https://culturacientifica.com/2016/05/18/misterio-la-gelatina-lorenzini/" rel="bookmark" title="El misterio de la gelatina de Lorenzini">El misterio de la gelatina de Lorenzini</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2017/01/24/lenguaje-los-libros-alquimia-oscura-misterio-la-existencia-estos/" rel="bookmark" title="El lenguaje de los libros de alquimia oscura y el misterio de la existencia de &#233;stos">El lenguaje de los libros de alquimia oscura y el misterio de la existencia de &#233;stos</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2013/09/12/el-misterio-del-pez-electrico-monofasico/" rel="bookmark" title="El misterio del pez el&#233;ctrico monof&#225;sico*">El misterio del pez el&#233;ctrico monof&#225;sico*</a>
+        </li>
+      </ol>
+    </div><img alt="" height="1" src="http://feeds.feedburner.com/~r/CuadernoDeCulturaCientfica/~4/SW1zCbo7DJg" width="1">
+</div>
+</div>
+
+<div class="item feed-e5c28223 feed-cuadernodeculturacientfica" id="item-002142e1">
+<p class="itemheader">
+<span class="itemtitle"><a href="http://feedproxy.google.com/~r/CuadernoDeCulturaCientfica/~3/tNSS6ZxzwNs/">&#191;C&#243;mo abordar la &#8216;nueva ense&#241;anza&#8217; si la mitad de los estudiantes no tiene internet ni ordenador?</a></span>
+<span class="itemfrom">[<a href="https://culturacientifica.com">Cuaderno de Cultura Cient&#237;fica</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <em><strong>Javier Portillo Berasaluce, Arantzazu L&#243;pez de la Serna, y Naiara Bilbao Quintana</strong></em>
+    </p>
+    <figure class="wp-caption aligncenter" id="attachment_29687">
+      <img alt="" class="size-full wp-image-29687" height="3369" src="https://culturacientifica.com/app/uploads/2020/10/thomas-park-6MePtA9EVDA-unsplash.jpg" style="height: auto;" width="5054">
+      <figcaption class="wp-caption-text" id="caption-attachment-29687" style="font-size: 85%;">
+        Photo by <a href="https://unsplash.com/@thomascpark?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Thomas Park</a> on <a href="https://unsplash.com/s/photos/covid-computer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+      </figcaption>
+    </figure>
+    <p>
+      El 91 % del total de estudiantes del mundo se ha visto afectado por el <a href="https://es.unesco.org/covid19/educationresponse">cierre de los centros de ense&#241;anza en 194 pa&#237;ses</a> debido a la pandemia. Este enorme desaf&#237;o global ha generado una transici&#243;n abrupta y no planificada a la ense&#241;anza a distancia.
+    </p>
+    <p>
+      Resulta evidente que no est&#225;bamos preparados para una transici&#243;n tan brusca, pero no lo es menos que la ense&#241;anza a distancia tiene que ser parte de la soluci&#243;n, aunque determinar en qu&#233; forma y porcentaje y c&#243;mo articularla siguen siendo cuestiones abiertas.
+    </p>
+    <p>
+      Los retos globales que afrontamos tras la primera oleada son la recuperaci&#243;n a corto plazo y la construcci&#243;n de sistemas educativos resilientes y equitativos para el futuro.
+    </p>
+    <p>
+      La respuesta a dichos retos no es una soluci&#243;n &#8220;llave en mano&#8221;. El &#8220;santo grial&#8221; de la educaci&#243;n a distancia no es la plataforma tecnol&#243;gica <em>online</em> de turno, ofrecida ahora en bandeja de plata por multinacionales como Google o Microsoft.
+    </p>
+    <p>
+      <strong>Recortes de la autonom&#237;a docente</strong>
+    </p>
+    <p>
+      Ya en los &#250;ltimos a&#241;os <a href="https://www.ei-ie.org/en/woe_homepage/woe_detail/4850/the-rise-of-the-global-%20education-industry-some-concepts-facts-and-figures#gsc.tab=0">ven&#237;an manifest&#225;ndose inquietudes</a> sobre si el creciente protagonismo de corporaciones privadas internacionales podr&#237;a recortar la autonom&#237;a profesional y los derechos del personal docente, as&#237; como el control local de las comunidades sobre sus escuelas.
+    </p>
+    <p>
+      Los habituales acuerdos asumidos con ligereza entre estas empresas y sus consumidores pueden modificar la concepci&#243;n de la educaci&#243;n como un bien p&#250;blico. <a href="https://ei-ie-al.org/recurso/la-comercializacion-y-la-privatizacion-en-y-de-la-educacion-en-el-contexto-de-la-covid-19">La Internacional de la Educaci&#243;n</a> advierte que el contexto de la pandemia ha servido para que se nos ofrezcan productos tecnol&#243;gicos para capitalizarlos en un futuro con objetivos comerciales y privatizadores de la educacio&#769;n.
+    </p>
+    <p>
+      Sobre la vuelta a la escuela en la nueva normalidad, la UNESCO, junto a la OIT (Organizaci&#243;n Internacional del Trabajo) han editado un <a href="https://unesdoc.unesco.org/ark:/48223/pf0000373479_spa">documento dirigido a los responsables pol&#237;ticos</a> con el objeto de guiarles en el apoyo que la pandemia ha demostrado que necesita la comunidad educativa.
+    </p>
+    <p>
+      <strong>Otras necesidades que no son tecnol&#243;gicas</strong>
+    </p>
+    <p>
+      El mensaje es claro, se requiere invertir en respuestas educativas que incluyan la contrataci&#243;n de m&#225;s personal; la protecci&#243;n de los derechos y condiciones de trabajo de los docentes; la atenci&#243;n al impacto psicol&#243;gico y socioemocional de la pandemia en alumnado y profesorado; la capacitaci&#243;n y preparaci&#243;n profesional adecuada para una escuela reconfigurada con impartici&#243;n presencial y a distancia&#8230;
+    </p>
+    <p>
+      Quiz&#225;s la COVID-19 haya decantado definitivamente el debate sobre las ventajas de la educaci&#243;n h&#237;brida (<em><a href="https://en.wikipedia.org/wiki/Blended_learning">Blended Learning</a></em>), pues la tozuda realidad impone su uso; quiz&#225;s disminuya la aversi&#243;n total a las tecnolog&#237;as de parte del colectivo, porque toda ayuda es necesaria cuando el confinamiento rompe en pedazos el modelo de docencia en el aula; quiz&#225;s el colectivo m&#225;s tecn&#243;logo tenga que atenuar su entusiasmo, pues la tecnolog&#237;a <em>per se</em> no ha sido capaz de solucionar la situaci&#243;n de manera totalmente satisfactoria; quiz&#225;s la regulaci&#243;n legal del trabajo a distancia sea prioritaria, pues deben protegerse los derechos laborales del cuerpo docente y deben prevenirse los efectos perniciosos a largo plazo de determinados usos de plataformas <em>online</em>.
+    </p>
+    <figure class="align-center zoomable">
+      <a href="https://images.theconversation.com/files/353130/original/file-20200817-16-bgbkh2.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip"><img alt="" src="https://images.theconversation.com/files/353130/original/file-20200817-16-bgbkh2.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;fit=clip" style="height: auto;"></a>
+      <figcaption>
+        <span class="caption">La brecha digital: Porcentaje de poblaci&#243;n sin acceso a internet.</span><br>
+        <span class="attribution"><a class="source" href="https://www.unicef-irc.org/publications/pdf/IRB%202020-10%20CL.pdf">Promising practices for equitable remote learning: Emerging lessons from COVID-19 education responses in 127 countries, UNICEF, Office of Research-Innocenti</a></span>
+      </figcaption>
+    </figure>
+    <p>
+      <strong>826 millones de estudiantes sin ordenador</strong>
+    </p>
+    <p>
+      En Europa Occidental identificamos de forma natural la educaci&#243;n a distancia con el uso combinado de dispositivos electr&#243;nicos y conexiones de internet de alta velocidad. La realidad internacional es otra, 826 millones de estudiantes (la mitad) no disponen de un ordenador en casa y 706 millones no tienen acceso a internet.
+    </p>
+    <p>
+      Esta realidad ha provocado que la respuesta <a href="https://www.unicef-irc.org/publications/pdf/IRB%202020-10%20CL.pdf">educativa a distancia durante el confinamiento del 68 % de los pa&#237;ses</a> haya sido una combinaci&#243;n de: medios digitales (73 %), televisi&#243;n (75 %), radio (58 %), recursos en papel repartidos a los hogares (48 %) y visitas (7 %).
+    </p>
+    <figure class="align-center zoomable">
+      <a href="https://images.theconversation.com/files/353129/original/file-20200817-14-bhbgik.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip"><img alt="" src="https://images.theconversation.com/files/353129/original/file-20200817-14-bhbgik.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;fit=clip" style="height: auto;"></a>
+      <figcaption>
+        <span class="caption">Porcentaje de pa&#237;ses seg&#250;n el modelo de ense&#241;anza remota.</span><br>
+        <span class="attribution"><a class="source" href="https://www.unicef-irc.org/publications/pdf/IRB%202020-10%20CL.pdf">Promising practices for equitable remote learning: Emerging lessons from COVID-19 education responses in 127 countries, UNICEF, Office of Research-Innocenti</a></span>
+      </figcaption>
+    </figure>
+    <figure class="align-right zoomable">
+      <a href="https://images.theconversation.com/files/353133/original/file-20200817-20-g1sige.jpg?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=1000&amp;fit=clip"><img alt="" src="https://images.theconversation.com/files/353133/original/file-20200817-20-g1sige.jpg?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=237&amp;fit=clip" style="height: auto;"></a>
+      <figcaption>
+        <span class="caption">&#193;rbol de decisi&#243;n sobre ense&#241;anza remota.</span><br>
+        <span class="attribution"><a class="source" href="https://inee.org/system/files/resources/UNICEF_COVID19_DECISION_TREE_V8_CLICK_HERE.pdf">UNICEF / Red Interagencial para la Educaci&#243;n en Situaciones de Emergencia (INEE)</a></span>
+      </figcaption>
+    </figure>
+    <p>
+      Asimismo, la esencial realimentaci&#243;n de padres, madres y tutores se ha llevado a cabo mediante SMS, <a href="https://www.unicef.org/innovation/ureportCOVID19"><em>chatbots</em></a> y aplicaciones de mensajer&#237;a.
+    </p>
+    <p>
+      La variedad de contextos es tan amplia &#8211;tener o no electricidad, radio, TV, tel&#233;fono m&#243;vil, conexi&#243;n de internet u ordenador&#8211; que UNICEF ha desarrollado un <a href="https://inee.org/system/files/resources/UNICEF_COVID19_DECISION_TREE_V8_CLICK_HERE.pdf">&#225;rbol de decisi&#243;n sobre ense&#241;anza remota</a>, una herramienta r&#225;pida para determinar los canales m&#225;s apropiados para la distribuci&#243;n de contenidos educativos.
+    </p>
+    <p>
+      <strong>Papel <em>versus</em> tecnolog&#237;a</strong>
+    </p>
+    <p>
+      Es interesante remarcar que, independientemente de la disponibilidad de ordenadores o plataformas <em>online</em>, UNICEF recomienda tener un soporte redundante a la comunicaci&#243;n <em>online</em> a trav&#233;s de papel para la distribuci&#243;n de contenidos y mediante SMS o tel&#233;fono para la realimentaci&#243;n entre educadores y tutores.
+    </p>
+    <p>
+      Esta estrategia permite, por un lado, disponer de un &#8220;plan B&#8221; para los casos en que fallen recursos que ya tenemos interiorizados como b&#225;sicos en nuestro d&#237;a a d&#237;a como plataformas educativas <em>online</em> o conexi&#243;n a internet, y por otro lado, asegura un canal de distribuci&#243;n de contenidos educativos para aquellas familias con menor poder adquisitivo que no dispongan de dichos recursos.
+    </p>
+    <p>
+      As&#237;, tanto el uso de lo que se ha venido a denominar tecnolog&#237;a frugal, como la redundancia en los canales de distribuci&#243;n y comunicaci&#243;n son ingredientes necesarios en un sistema educativo resilente y equitativo.
+    </p>
+    <p>
+      <strong>La inclusi&#243;n es la clave</strong>
+    </p>
+    <p>
+      La ONU aboga por un cambio generalizado en el mundo del trabajo hacia <a href="https://unsdg.un.org/resources/policy-brief-world-work-and-covid-19">una digitalizaci&#243;n m&#225;s inclusiva y centrada en las personas</a>.
+    </p>
+    <p>
+      La educaci&#243;n, concretamente, es una actividad eminentemente social en la que no deber&#237;a obviarse la importancia del apoyo entre iguales. Esta m&#225;xima afecta al colectivo de estudiantes donde el refuerzo de la coevaluaci&#243;n, tutor&#237;a y mentor&#237;a entre alumnos tiene mucho potencial de crecimiento en situaciones de ense&#241;anza h&#237;brida o a distancia.
+    </p>
+    <p>
+      Asimismo, una comunidad de profesorado interconectado constituye una red bien tejida que arropa a cada profesional y facilita el debate, compartici&#243;n de recursos, colaboraci&#243;n, realimentaci&#243;n y evaluaci&#243;n entre iguales. Las instituciones podr&#237;an incentivar el fortalecimiento de estas comunidades, tanto nacionales como internacionales, impulsando as&#237; el uso compartido de los recursos generados en formato abierto.
+    </p>
+    <p>
+      En conclusi&#243;n, la ense&#241;anza a distancia lleg&#243; para quedarse, <a href="https://theconversation.com/la-docencia-mixta-marcara-el-proximo-curso-en-la-universidad-espanola-141171">bien como complemento que enriquezca la presencial</a>, bien como recurso m&#225;s intensivo en situaciones de confinamiento.
+    </p>
+    <p>
+      Ahora bien, la ense&#241;anza a distancia no puede sustituir quir&#250;rgicamente a la presencial, ni una plataforma <em>online</em> puede sustituir todas las interacciones entre personas que se dan en un aula, ni la necesaria labor del profesor o profesora.
+    </p>
+    <p>
+      El santo grial de la educaci&#243;n a distancia est&#225; en el profesorado. Es prioritario invertir en el capital humano que va a dise&#241;ar y modular los procesos de ense&#241;anza-aprendizaje, que se basan en la interacci&#243;n entre personas.
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      Sobre los autores: <a href="https://theconversation.com/profiles/javier-portillo-berasaluce-945732">Javier Portillo Berasaluce</a>, <a href="https://theconversation.com/profiles/arantzazu-lopez-de-la-serna-1075168">Arantzazu L&#243;pez de la Serna</a>, y <a href="https://theconversation.com/profiles/naiara-bilbao-quintana-1074832">Naiara Bilbao Quintana</a>, son profesores del departamento de Did&#225;ctica y Organizaci&#243;n Escolar de la <em><a href="https://theconversation.com/institutions/universidad-del-pais-vasco-euskal-herriko-unibertsitatea-3422">Universidad del Pa&#237;s Vasco / Euskal Herriko Unibertsitatea</a></em>
+    </p>
+    <p>
+      Este art&#237;culo fue publicado originalmente en <a href="https://theconversation.com">The Conversation</a>. Art&#237;culo <a href="https://theconversation.com/covid-19-como-abordar-la-nueva-ensenanza-si-la-mitad-de-los-estudiantes-no-tiene-internet-ni-ordenador-143478">original</a>.
+    </p>
+    <p>
+      El art&#237;culo <a href="https://culturacientifica.com/2020/10/02/como-abordar-la-nueva-ensenanza-si-la-mitad-de-los-estudiantes-no-tiene-internet-ni-ordenador/" rel="nofollow">&#191;C&#243;mo abordar la &#8216;nueva ense&#241;anza&#8217; si la mitad de los estudiantes no tiene internet ni ordenador?</a> se ha escrito en <a href="https://culturacientifica.com" rel="nofollow">Cuaderno de Cultura Cient&#237;fica</a>.
+    </p>
+    <div class="yarpp-related-rss">
+      <h3>
+        Entradas relacionadas:
+      </h3>
+      <ol>
+        <li>
+          <a href="https://culturacientifica.com/2017/12/08/la-ensenanza-multilingue-las-lenguas/" rel="bookmark" title="La ense&#241;anza multiling&#252;e de las lenguas">La ense&#241;anza multiling&#252;e de las lenguas</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2017/04/17/cientificos-estudiantes-se-encuentran-traves-internet/" rel="bookmark" title="Cient&#237;ficos y estudiantes se encuentran a trav&#233;s de Internet">Cient&#237;ficos y estudiantes se encuentran a trav&#233;s de Internet</a>
+        </li>
+        <li>
+          <a href="https://culturacientifica.com/2014/06/09/el-sensacionalismo-en-las-noticias-clave-en-la-concienciacion-sobre-los-riesgos-de-internet/" rel="bookmark" title="El sensacionalismo en las noticias clave en la concienciaci&#243;n sobre los riesgos de Internet">El sensacionalismo en las noticias clave en la concienciaci&#243;n sobre los riesgos de Internet</a>
+        </li>
+      </ol>
+    </div><img alt="" height="1" src="http://feeds.feedburner.com/~r/CuadernoDeCulturaCientfica/~4/tNSS6ZxzwNs" width="1">
+</div>
+</div>
+
+<div class="item feed-3f12b681 feed-enlacerecomendadonaukas" id="item-5b89bea4">
+<p class="itemheader">
+<span class="itemtitle"><a href="https://naukas.com/2020/10/10/cartografiando-la-ignorancia-333/">Cartografiando la ignorancia #333</a></span>
+<span class="itemfrom">[<a href="https://naukas.com">Enlace Recomendado &#8211; Naukas</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter size-full wp-image-35203" height="500" src="https://naukas.com/fx/uploads/2020/10/SmellTheRoses.png" width="441">
+    </p>
+    <p>
+      La relaci&#243;n fundamental entre informaci&#243;n e irreversibilidad va a ser cosa de un demonio. Daniel Manzano, del Instituto Carlos I, lo sabe bien: <a href="https://mappingignorance.org/2020/10/05/maxwells-demon-and-the-relationship-between-information-and-irreversibility/">Maxwell&#8217;s demon and the relationship between information and irreversibility</a>
+    </p>
+    <p>
+      En la pel&#237;cula matrix todo ocurre en tu cabeza. Matrix es capaz de hacer que sientas como real lo que son solo una serie de impulsos el&#233;ctricos mandados a tu enc&#233;falo. Por cierto, se ha dicho poco que la idea original es de George Berkeley, solo que &#233;l llamaba Dios a Matrix. La cuesti&#243;n, que eso que parec&#237;a ciencia ficci&#243;n lo es cada vez un poquito menos: <a href="https://mappingignorance.org/2020/10/07/how-to-smell-a-smell-that-is-actually-not-there/">How to smell a smell that is actually not there</a> por Rosa Garc&#237;a-Verdugo.
+    </p>
+    <p>
+      Cuando hablamos de la nueva electr&#243;nica, un &#225;tomo, literalmente un &#225;tomo, aqu&#237; o all&#225; es la noche o el d&#237;a. La gente del DIPC en <a href="https://mappingignorance.org/2020/10/08/the-critical-role-of-single-atoms-on-the-electronic-properties-of-a-metal-organic-network/">The critical role of single atoms on the electronic properties of a metal organic network</a>
+    </p>
+    <p>
+      <strong><a href="http://mappingignorance.org/">Mapping Ignorance</a></strong> <i>es un blog colaborativo escrito por investigadores y t&#233;cnicos en activo centrado en los &#250;ltimos resultados de la investigaci&#243;n en cualquier campo cient&#237;fico. Es una iniciativa de la C&#225;tedra de Cultura Cient&#237;fica de la Universidad del Pa&#237;s Vasco y su Campus de Excelencia Internacional. Si quieres ser colaborador, p&#237;deme m&#225;s informaci&#243;n</i> <strong><a href="http://mappingignorance.org/contact/"><i>aqu&#237;</i></a></strong><i>.</i>
+    </p>
+    <p>
+      &#160;
+    </p>
+    <div class="saboxplugin-wrap">
+      <div class="saboxplugin-gravatar">
+        <a href="https://naukas.com/author/experientia-docet/"><img alt="" src="https://naukas.com/fx/uploads/2019/03/FOTO-CTL-2018.jpg"></a>
+      </div>
+      <div class="saboxplugin-authorname">
+        <a class="vcard author" href="https://naukas.com/author/experientia-docet/" rel="author"><span class="fn">C&#233;sar Tom&#233; L&#243;pez</span></a>
+      </div>
+      <div class="saboxplugin-desc">
+        <div>
+          <p>
+            Qu&#237;mico. Trabajo en Euskampus Fundazioa con la C&#225;tedra de Cultura Cient&#237;fica de la UPV/EHU, para la que edito el <a href="https://culturacientifica.com/">Cuaderno de Cultura Cient&#237;fica</a> y <a href="https://mappingignorance.org/">Mapping Ignorance</a>. Escribo cosas para el Donostia International Physics Center y el Basque Center for Applied Mathematics. Profesor del <a href="https://scientia.eus/">M&#225;ster de Cultura Cient&#237;fica</a> UPV/EHU-UPNA.
+          </p>
+        </div>
+      </div>
+      <div class="saboxplugin-web">
+        <a href="http://edocet.naukas.com/" target="_self">edocet.naukas.com/</a>
+      </div>
+      <div class="clearfix"></div>
+      <div class="saboxplugin-socials">
+        <a class="saboxplugin-icon-grey" href="https://twitter.com/EDocet" rel="nofollow" target="_self"><svg class="sab-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></a>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="item feed-3f12b681 feed-enlacerecomendadonaukas" id="item-b418a260">
+<p class="itemheader">
+<span class="itemtitle"><a href="https://naukas.com/2020/10/04/hitos-en-la-red-334/">Hitos en la red #334</a></span>
+<span class="itemfrom">[<a href="https://naukas.com">Enlace Recomendado &#8211; Naukas</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter wp-image-35187 size-full" height="1000" src="https://naukas.com/fx/uploads/2020/10/1_irudia_hauts_ekaitza.jpg" width="1500">
+    </p>
+    <p>
+      Cuando escuches en la previsi&#243;n meteorol&#243;gica hablar de calima acu&#233;rdate de esto&#8230; <a href="https://culturacientifica.com/2020/09/28/el-polvo-del-sahara-fuente-de-vida-y-muerte/">El polvo del S&#225;hara: fuente de vida y muerte</a> por Juanma Gallego
+    </p>
+    <p>
+      Tiene bemoles la cosa&#8230; <a href="https://francis.naukas.com/2020/10/03/un-articulo-de-1964-sobre-un-pendulo-permite-acotar-ciertos-parametros-de-la-gravitacion-cuantica/" rel="noopener noreferrer" target="_self">Un art&#237;culo de 1964 sobre un p&#233;ndulo permite acotar ciertos par&#225;metros de la gravitaci&#243;n cu&#225;ntica</a> por Francisco R. Villatoro
+    </p>
+    <p>
+      Hablando de bemoles, &#191;alguna vez te has preguntado como escriben m&#250;sica los tibetanos? <a href="https://culturacientifica.com/2020/10/01/del-tibet-a-debussy-en-una-partitura/">Del T&#237;bet a Debussy en una partitura</a> por Almudena M. Castro
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      Tambi&#233;n son muy interesantes:
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/09/28/la-primera-pelicula-de-la-sombra-del-agujero-negro-m87-gracias-a-eht/" rel="noopener noreferrer" target="_self">La primera pel&#237;cula de la sombra del agujero negro M87* gracias a EHT</a>
+    </p>
+    <p>
+      <a href="https://danielmarin.naukas.com/2020/09/29/las-proximas-sondas-a-venus/" rel="noopener noreferrer" target="_self">Las pr&#243;ximas sondas a Venus</a>
+    </p>
+    <p>
+      <a href="https://fuga.naukas.com/2020/09/29/cuando-los-problemas-no-tienen-una-solucion/" rel="noopener noreferrer" target="_self">Cuando los problemas no tienen (una) soluci&#243;n</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/10/02/como-abordar-la-nueva-ensenanza-si-la-mitad-de-los-estudiantes-no-tiene-internet-ni-ordenador/">&#191;C&#243;mo abordar la &#8216;nueva ense&#241;anza&#8217; si la mitad de los estudiantes no tiene internet ni ordenador?</a>
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/10/03/la-relacion-entre-la-severidad-de-la-covid-19-y-nuestro-genoma-neandertal/" rel="noopener noreferrer" target="_self">La relaci&#243;n entre la severidad de la COVID-19 y nuestro genoma neandertal</a>
+    </p>
+    <p>
+      <a href="https://danielmarin.naukas.com/2020/10/02/los-problemas-del-programa-de-exploracion-planetaria-de-la-nasa/" rel="noopener noreferrer" target="_self">Los problemas del programa de exploraci&#243;n planetaria de la NASA</a>
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/10/02/el-entrelazamiento-cuantico-hibrido-entre-una-milimembrana-macroscopica-y-los-espines-de-un-gas-de-atomos/" rel="noopener noreferrer" target="_self">El entrelazamiento cu&#225;ntico h&#237;brido entre una milimembrana macrosc&#243;pica y los espines de un gas de &#225;tomos</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/30/el-triangulo-de-pascal-para-calcular-tangentes/">El tri&#225;ngulo de Pascal para calcular tangentes</a>
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/10/02/la-fuerza-mecanica-de-la-union-de-la-espicula-de-sars-cov-2-al-receptor-humano-ace2/" rel="noopener noreferrer" target="_self">La fuerza mec&#225;nica de la uni&#243;n de la esp&#237;cula de SARS-CoV-2 al receptor humano ACE2</a>
+    </p>
+    <p>
+      <a href="https://danielmarin.naukas.com/2020/10/01/janus-dos-pequenas-sondas-para-explorar-dos-pequenos-asteroides/" rel="noopener noreferrer" target="_self">Janus: dos peque&#241;as sondas para explorar dos peque&#241;os asteroides</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/29/la-naturaleza-estadistica-del-periodo-de-semidesintegracion/">La naturaleza estad&#237;stica del periodo de semidesintegraci&#243;n</a>
+    </p>
+    <div class="saboxplugin-wrap">
+      <div class="saboxplugin-gravatar">
+        <a href="https://naukas.com/author/experientia-docet/"><img alt="" src="https://naukas.com/fx/uploads/2019/03/FOTO-CTL-2018.jpg"></a>
+      </div>
+      <div class="saboxplugin-authorname">
+        <a class="vcard author" href="https://naukas.com/author/experientia-docet/" rel="author"><span class="fn">C&#233;sar Tom&#233; L&#243;pez</span></a>
+      </div>
+      <div class="saboxplugin-desc">
+        <div>
+          <p>
+            Qu&#237;mico. Trabajo en Euskampus Fundazioa con la C&#225;tedra de Cultura Cient&#237;fica de la UPV/EHU, para la que edito el <a href="https://culturacientifica.com/">Cuaderno de Cultura Cient&#237;fica</a> y <a href="https://mappingignorance.org/">Mapping Ignorance</a>. Escribo cosas para el Donostia International Physics Center y el Basque Center for Applied Mathematics. Profesor del <a href="https://scientia.eus/">M&#225;ster de Cultura Cient&#237;fica</a> UPV/EHU-UPNA.
+          </p>
+        </div>
+      </div>
+      <div class="saboxplugin-web">
+        <a href="http://edocet.naukas.com/" target="_self">edocet.naukas.com/</a>
+      </div>
+      <div class="clearfix"></div>
+      <div class="saboxplugin-socials">
+        <a class="saboxplugin-icon-grey" href="https://twitter.com/EDocet" rel="nofollow" target="_self"><svg class="sab-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></a>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="item feed-3f12b681 feed-enlacerecomendadonaukas" id="item-e2ef1887">
+<p class="itemheader">
+<span class="itemtitle"><a href="https://naukas.com/2020/09/27/hitos-en-la-red-333/">Hitos en la red #333</a></span>
+<span class="itemfrom">[<a href="https://naukas.com">Enlace Recomendado &#8211; Naukas</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter size-full wp-image-35165" height="369" src="https://naukas.com/fx/uploads/2020/09/imagen-22-1.jpg" width="553">
+    </p>
+    <p>
+      Ri&#225;monos, por no llorar: <a href="https://francis.naukas.com/2020/09/22/premios-ig-nobel-2020/" rel="noopener noreferrer" target="_self">Premios Ig Nobel 2020</a> por Francisco R. Villatoro
+    </p>
+    <p>
+      Otra opci&#243;n es viajar mentalmente a otro lugar y otro tiempo, con Paco Bellido: <a href="https://pacobellido.naukas.com/2020/09/26/el-reloj-astronomico-de-sint-truiden/" rel="noopener noreferrer" target="_self">El reloj astron&#243;mico de Sint Truiden</a>
+    </p>
+    <p>
+      O directamente podemos rendirnos a la evidencia y saludar a los nuevos amos post-pandemia: <a href="https://danielmarin.naukas.com/2020/09/21/nuevos-detalles-del-programa-lunar-tripulado-chino/" rel="noopener noreferrer" target="_self">Nuevos detalles del programa lunar tripulado chino</a> por Daniel Mar&#237;n
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      Tambi&#233;n son muy interesantes:
+    </p>
+    <p>
+      <a href="https://montoliu.naukas.com/2020/09/21/clonacion-de-caballos-prometea-y-kurt/">Clonaci&#243;n de caballos: de Prometea a Kurt</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/25/nanoparticulas-recubiertas-para-el-tratamiento-localizado-del-cancer-por-hipertermia-magnetica/">Nanopart&#237;culas recubiertas para el tratamiento localizado del c&#225;ncer por hipertermia magn&#233;tica</a>
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/09/24/las-espiculas-de-los-coronavirus-sars-cov-2-humano-ratg13-murcielago-y-pcov_gx-pangolin/" rel="noopener noreferrer" target="_self">Las esp&#237;culas de los coronavirus SARS-CoV-2 (humano), RaTG13 (murci&#233;lago) y PCoV_GX (pangol&#237;n)</a>
+    </p>
+    <p>
+      <a href="https://danielmarin.naukas.com/2020/09/25/un-pedazo-de-la-luna-en-la-urss-medio-siglo-del-luna-16/" rel="noopener noreferrer" target="_self">Un pedazo de la Luna en la URSS: medio siglo del Luna 16</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/24/menos-conceptos-y-mas-pensamiento-critico-para-mejorar-la-educacion-cientifica-en-el-aula/">Menos conceptos y m&#225;s pensamiento cr&#237;tico para mejorar la educaci&#243;n cient&#237;fica en el aula</a>
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/09/23/el-uso-de-la-ace2-trimerica-como-antiviral-contra-sars-cov-2-resultados-in-vitro/" rel="noopener noreferrer" target="_self">El uso de la ACE2 trim&#233;rica como antiviral contra SARS-CoV-2 (resultados in vitro)</a>
+    </p>
+    <p>
+      <a href="https://danielmarin.naukas.com/2020/09/24/el-cohete-reutilizable-ariane-next-el-falcon-9-europeo/" rel="noopener noreferrer" target="_self">El cohete reutilizable Ariane Next, el Falcon 9 europeo</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/23/arte-moebius-ii/">Arte Moebius (II)</a>
+    </p>
+    <p>
+      <a href="https://francis.naukas.com/2020/09/21/la-union-de-la-espicula-del-coronavirus-sars-cov-2-a-tres-receptores-ace2/" rel="noopener noreferrer" target="_self">La uni&#243;n de la esp&#237;cula del coronavirus SARS-CoV-2 a tres receptores ACE2</a>
+    </p>
+    <p>
+      <a href="https://danielmarin.naukas.com/2020/09/22/el-coste-de-poner-un-astronauta-en-la-luna-en-2024-y-otras-novedades-del-programa-artemisa-de-la-nasa/" rel="noopener noreferrer" target="_self">El coste de poner un astronauta en la Luna en 2024 y otras novedades del programa Artemisa de la NASA</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/22/periodo-de-semidesintegracion/">Periodo de semidesintegraci&#243;n</a>
+    </p>
+    <p>
+      <a href="https://culturacientifica.com/2020/09/21/que-hacemos-ahora-con-venus/">&#191;Qu&#233; hacemos ahora con Venus?</a>
+    </p>
+    <div class="saboxplugin-wrap">
+      <div class="saboxplugin-gravatar">
+        <a href="https://naukas.com/author/experientia-docet/"><img alt="" src="https://naukas.com/fx/uploads/2019/03/FOTO-CTL-2018.jpg"></a>
+      </div>
+      <div class="saboxplugin-authorname">
+        <a class="vcard author" href="https://naukas.com/author/experientia-docet/" rel="author"><span class="fn">C&#233;sar Tom&#233; L&#243;pez</span></a>
+      </div>
+      <div class="saboxplugin-desc">
+        <div>
+          <p>
+            Qu&#237;mico. Trabajo en Euskampus Fundazioa con la C&#225;tedra de Cultura Cient&#237;fica de la UPV/EHU, para la que edito el <a href="https://culturacientifica.com/">Cuaderno de Cultura Cient&#237;fica</a> y <a href="https://mappingignorance.org/">Mapping Ignorance</a>. Escribo cosas para el Donostia International Physics Center y el Basque Center for Applied Mathematics. Profesor del <a href="https://scientia.eus/">M&#225;ster de Cultura Cient&#237;fica</a> UPV/EHU-UPNA.
+          </p>
+        </div>
+      </div>
+      <div class="saboxplugin-web">
+        <a href="http://edocet.naukas.com/" target="_self">edocet.naukas.com/</a>
+      </div>
+      <div class="clearfix"></div>
+      <div class="saboxplugin-socials">
+        <a class="saboxplugin-icon-grey" href="https://twitter.com/EDocet" rel="nofollow" target="_self"><svg class="sab-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></a>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="item feed-3f12b681 feed-enlacerecomendadonaukas" id="item-01e7779e">
+<p class="itemheader">
+<span class="itemtitle"><a href="https://naukas.com/2020/09/19/cartografiando-la-ignorancia-330/">Cartografiando la ignorancia #330</a></span>
+<span class="itemfrom">[<a href="https://naukas.com">Enlace Recomendado &#8211; Naukas</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter wp-image-35143 size-full" height="600" src="https://naukas.com/fx/uploads/2020/09/sudeera-seneviratne-w7owtmg8P6M-unsplash.jpg" width="450">
+    </p>
+    <p>
+      El olor corporal es algo que ha acompa&#241;ado a la especie durante su evoluci&#243;n. Quiz&#225;s por ello lo hemos integrado en nuestra toma de decisiones. <a href="https://mappingignorance.org/2020/09/14/smelling-armpits/">Smelling armpits</a> por J.R. Alonso
+    </p>
+    <p>
+      La filosof&#237;a de la ciencia exist&#237;a antes de que existiese la filosof&#237;a de la ciencia, lo que ocurre es que se la llamaba por otros nombres. Jes&#250;s Zamora Bonilla se ha propuesto investigar sus or&#237;genes en una nueva serie. <a href="https://mappingignorance.org/2020/09/16/the-prehistory-of-philosophy-of-science-1-by-way-of-introduction/">The &#8216;prehistory&#8217; of philosophy of science (1): By way of introduction</a>
+    </p>
+    <p>
+      Los catalizadores de platino que transforman el mon&#243;xido en di&#243;xido de carbono son de una importancia industrial (y para la salud, recordemos que el mon&#243;xido es t&#243;xico) enorme. Con todo aun no sabemos exactamente como act&#250;an. menos mal que a la gente del DIPC se le ocurren formas ingenios&#237;simas para conocer mejor los mecanismos de reacci&#243;n: <a href="https://mappingignorance.org/2020/09/17/simultaneous-ignition-of-the-co-oxidation-on-a-curved-platinum-surface/">Simultaneous ignition of the CO oxidation on a curved platinum surface</a>
+    </p>
+    <p>
+      <strong><a href="http://mappingignorance.org/">Mapping Ignorance</a></strong> <i>es un blog colaborativo escrito por investigadores y t&#233;cnicos en activo centrado en los &#250;ltimos resultados de la investigaci&#243;n en cualquier campo cient&#237;fico. Es una iniciativa de la C&#225;tedra de Cultura Cient&#237;fica de la Universidad del Pa&#237;s Vasco y su Campus de Excelencia Internacional. Si quieres ser colaborador, p&#237;deme m&#225;s informaci&#243;n</i> <strong><a href="http://mappingignorance.org/contact/"><i>aqu&#237;</i></a></strong><i>.</i>
+    </p>
+    <div class="saboxplugin-wrap">
+      <div class="saboxplugin-gravatar">
+        <a href="https://naukas.com/author/experientia-docet/"><img alt="" src="https://naukas.com/fx/uploads/2019/03/FOTO-CTL-2018.jpg"></a>
+      </div>
+      <div class="saboxplugin-authorname">
+        <a class="vcard author" href="https://naukas.com/author/experientia-docet/" rel="author"><span class="fn">C&#233;sar Tom&#233; L&#243;pez</span></a>
+      </div>
+      <div class="saboxplugin-desc">
+        <div>
+          <p>
+            Qu&#237;mico. Trabajo en Euskampus Fundazioa con la C&#225;tedra de Cultura Cient&#237;fica de la UPV/EHU, para la que edito el <a href="https://culturacientifica.com/">Cuaderno de Cultura Cient&#237;fica</a> y <a href="https://mappingignorance.org/">Mapping Ignorance</a>. Escribo cosas para el Donostia International Physics Center y el Basque Center for Applied Mathematics. Profesor del <a href="https://scientia.eus/">M&#225;ster de Cultura Cient&#237;fica</a> UPV/EHU-UPNA.
+          </p>
+        </div>
+      </div>
+      <div class="saboxplugin-web">
+        <a href="http://edocet.naukas.com/" target="_self">edocet.naukas.com/</a>
+      </div>
+      <div class="clearfix"></div>
+      <div class="saboxplugin-socials">
+        <a class="saboxplugin-icon-grey" href="https://twitter.com/EDocet" rel="nofollow" target="_self"><svg class="sab-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></a>
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="item feed-3f12b681 feed-enlacerecomendadonaukas" id="item-02e630b0">
+<p class="itemheader">
+<span class="itemtitle"><a href="https://naukas.com/2020/09/12/cartografiando-la-ignorancia-329/">Cartografiando la ignorancia #329</a></span>
+<span class="itemfrom">[<a href="https://naukas.com">Enlace Recomendado &#8211; Naukas</a>]</span>
+</p>
+<div class="itemdescription">
+<p>
+      <img alt="" class="aligncenter size-full wp-image-35132" height="1536" src="https://naukas.com/fx/uploads/2020/09/drone-transport.jpg" width="2048">
+    </p>
+    <p>
+      Dec&#237;a Miguel Gila en un famoso chiste sobre un submarino, &#8220;de color bien, pero no flota&#8221;. La idea de usar drones para la distribuci&#243;n de material sanitario en lugares inh&#243;spitos es muy buena, pero tiene demasiadas limitaciones como para ser pr&#225;ctica. Juli&#225;n Est&#233;vez en <a href="https://mappingignorance.org/2020/09/09/the-limitations-of-drones-for-medicine-delivery/">The limitations of drones for medicine delivery</a>
+    </p>
+    <p>
+      Un nuevo m&#233;todo de microscop&#237;a permite investigar las irregularidades en las placas de amiloide caracter&#237;sticas de algunas enfermedades neurodegenerativas. Lo mejor del nuevo m&#233;todo es que emplea piezas convencionales y que los autores han compartido en abierto su c&#243;digo. Rosa Garc&#237;a- Verdugo en A microscopy method to look at amyloid protein structure
+    </p>
+    <p>
+      La simulaciones desde primeros principios son fundamentales para entender fen&#243;menos de los que disponemos informaci&#243;n experimental incompleta. Ese es el caso del hidr&#243;geno met&#225;lico. Ahora, la gente del DIPC ha descubierto de esta manera que esta fase es transparente al infrarrojo, en el argot, que es un metal negro: <a href="https://mappingignorance.org/2020/09/10/black-metallic-hydrogen-due-to-proton-quantum-fluctuations/">Black metallic hydrogen due to proton quantum fluctuations</a>.
+    </p>
+    <p>
+      <strong><a href="http://mappingignorance.org/">Mapping Ignorance</a></strong> <i>es un blog colaborativo escrito por investigadores y t&#233;cnicos en activo centrado en los &#250;ltimos resultados de la investigaci&#243;n en cualquier campo cient&#237;fico. Es una iniciativa de la C&#225;tedra de Cultura Cient&#237;fica de la Universidad del Pa&#237;s Vasco y su Campus de Excelencia Internacional. Si quieres ser colaborador, p&#237;deme m&#225;s informaci&#243;n</i> <strong><a href="http://mappingignorance.org/contact/"><i>aqu&#237;</i></a></strong><i>.</i>
+    </p>
+    <p>
+      &#160;
+    </p>
+    <div class="saboxplugin-wrap">
+      <div class="saboxplugin-gravatar">
+        <a href="https://naukas.com/author/experientia-docet/"><img alt="" src="https://naukas.com/fx/uploads/2019/03/FOTO-CTL-2018.jpg"></a>
+      </div>
+      <div class="saboxplugin-authorname">
+        <a class="vcard author" href="https://naukas.com/author/experientia-docet/" rel="author"><span class="fn">C&#233;sar Tom&#233; L&#243;pez</span></a>
+      </div>
+      <div class="saboxplugin-desc">
+        <div>
+          <p>
+            Qu&#237;mico. Trabajo en Euskampus Fundazioa con la C&#225;tedra de Cultura Cient&#237;fica de la UPV/EHU, para la que edito el <a href="https://culturacientifica.com/">Cuaderno de Cultura Cient&#237;fica</a> y <a href="https://mappingignorance.org/">Mapping Ignorance</a>. Escribo cosas para el Donostia International Physics Center y el Basque Center for Applied Mathematics. Profesor del <a href="https://scientia.eus/">M&#225;ster de Cultura Cient&#237;fica</a> UPV/EHU-UPNA.
+          </p>
+        </div>
+      </div>
+      <div class="saboxplugin-web">
+        <a href="http://edocet.naukas.com/" target="_self">edocet.naukas.com/</a>
+      </div>
+      <div class="clearfix"></div>
+      <div class="saboxplugin-socials">
+        <a class="saboxplugin-icon-grey" href="https://twitter.com/EDocet" rel="nofollow" target="_self"><svg class="sab-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></a>
+      </div>
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<h2 id="feedstatsheader">Feeds</h2>
+<div id="feedstats">
+<table id="feeds">
+<tr id="feedsheader">
+<th>Feed</th><th>RSS</th><th>Last fetched</th><th>Next fetched after</th>
+</tr>
+
+<tr class="feedsrow">
+<td><a href="https://culturacientifica.com">Cuaderno de Cultura Cient&#237;fica</a></td>
+<td><a class="xmlbutton" href="https://feeds.feedburner.com/CuadernoDeCulturaCientfica">XML</a></td>
+<td>10:40 AM, Sunday, 11 October 2020</td>
+<td>01:40 PM, Sunday, 11 October 2020</td>
+</tr>
+
+<tr class="feedsrow">
+<td><a href="https://naukas.com">Enlace Recomendado &#8211; Naukas</a></td>
+<td><a class="xmlbutton" href="https://naukas.com/categorias/miscelanea/enlace-recomendado/feed/">XML</a></td>
+<td>10:40 AM, Sunday, 11 October 2020</td>
+<td>01:40 PM, Sunday, 11 October 2020</td>
+</tr>
+
+</table>
+
+</div>
+<div id="footer">
+<p id="aboutrawdog">Generated by
+<a href="http://offog.org/code/rawdog.html">rawdog</a>
+version 2.22
+by <a href="mailto:ats@offog.org">Adam Sampson</a>.</p>
+</div>
+</body>
+</html>
