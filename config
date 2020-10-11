@@ -1,6 +1,0 @@
-tidyhtml true
-plugindirs plugins
-keepmax 5
-
-feed 3h https://naukas.com/categorias/miscelanea/enlace-recomendado/feed/
-feed 3h https://feeds.feedburner.com/CuadernoDeCulturaCientfica
